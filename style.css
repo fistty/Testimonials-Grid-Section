@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+/*============== HTML RESET ==============*/
+*,
+*::after,
+*::before {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+/*============== VARIBALE DECLARATIONS  ==============*/
+:root {
+  --Moderate-violet: hsl(263, 55%, 52%);
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+
+  --white-bg-70: hsla(217, 19%, 35%, 0.7);
+  --white-bg-50: hsla(217, 19%, 35%, 0.5);
+  --Barlow-Semi-font: "Barlow Semi Condensed", sans-serif;
+}
+
+/*============== ATTRIBUTION ==============*/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*============== BODY ==============*/
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  max-width: 100%;
+  background-color: var(--Light-grayish-blue);
+}
+
+/*============== MAIN ==============*/
+main {
+  padding-inline: 1.2rem;
+  margin-top: 5rem;
+  margin-bottom: 5.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+/*============== CARD ==============*/
+main > .card {
+  border-radius: 0.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+  box-shadow: rgb(0 0 0 / 10%) 43px 30px 37px -13px;
+}
+
+/*============== CARD HEADER ==============*/
+.card > .card-header {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+  padding-inline: 1.51rem;
+}
+
+.card-header > .image-container > img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 50%;
+  max-width: 40px;
+}
+
+.card-header > .text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card-header > .text-container > h1 {
+  color: var(--Light-grayish-blue);
+  font-size: 1.2rem;
+}
+
+.card-header > .text-container > p {
+  color: rgb(236, 242, 248, 50%);
+  font-size: 1.06rem;
+}
+
+/*============== CARD MAIN ==============*/
+.card > .card-main {
+  margin-top: 1rem;
+}
+
+.card-main-header > h1 {
+  color: var(--White);
+  font-size: 1.38rem;
+  padding-inline: 1.51rem;
+  font-weight: 600;
+}
+
+.card-main-paragraph > p {
+  font-size: 13px;
+  color: hsla(210, 46%, 95%, 0.5);
+  font-weight: 500;
+  padding-left: 1.51rem;
+  padding-right: 51px;
+  margin-top: 1rem;
+}
+
+/*============== CARD 1 ==============*/
+.card-1 {
+  background-color: var(--Moderate-violet);
+}
+
+.header-img1 {
+  border: 3px solid rgb(236, 242, 248, 50%);
+}
+
+.card-1 > .card-main > .card-main-paragraph > p {
+  padding-left: 1.51rem;
+  padding-right: 4.0625rem;
+}
+
+/*============== CARD 2 ==============*/
+.card-2 {
+  background-color: var(--Very-dark-grayish-blue);
+}
+
+/*============== CARD 3 ==============*/
+.card-3 {
+  background-color: var(--White);
+}
+
+.card-3 > .card-header > .text-container > h1 {
+  color: var(--Very-dark-grayish-blue);
+}
+
+.card-3 > .card-header > .text-container > p {
+  color: var(--white-bg-50);
+}
+
+.card-3 > .card-main > .card-main-header > h1 {
+  color: var(--Very-dark-grayish-blue);
+}
+
+.card-3 > .card-main > .card-main-paragraph > p {
+  color: var(--white-bg-70);
+}
+
+/*============== CARD 4 ==============*/
+.card-4 {
+  background-color: var(--Very-dark-blackish-blue);
+}
+
+.card-4 > .card-header > .image-container > img {
+  border: 3px solid var(--Moderate-violet);
+}
+
+/*============== CARD 5 ==============*/
+.card-5 {
+  background-color: var(--White);
+}
+
+.card-5 > .card-header > .text-container > h1 {
+  color: var(--Very-dark-grayish-blue);
+}
+
+.card-5 > .card-header > .text-container > p {
+  color: var(--white-bg-50);
+}
+
+.card-5 > .card-main > .card-main-header > h1 {
+  color: var(--Very-dark-grayish-blue);
+}
+
+.card-5 > .card-main > .card-main-paragraph > p {
+  color: var(--white-bg-70);
+}
+
+/*============== RESPONSIVE STYLING ==============*/
+@media screen and (min-width: 768px) {
+  /*============== CARD 2 ==============*/
+  .card-1 {
+    background-color: rgb(44, 19, 19);
+  }
+
+  /*============== MAIN ==============*/
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "card1 card2"
+      "card1 card3"
+      "card4 card5";
+    margin: 0 auto;
+    margin-top: 5rem;
+    margin-bottom: 5.5rem;
+    max-width: 76rem;
+  }
+
+  /*============== CARD 1 ==============*/
+  .card-1 {
+    background-color: var(--Moderate-violet);
+    grid-area: card1;
+  }
+
+  /*============== CARD 2 ==============*/
+  .card-2 {
+    background-color: var(--Very-dark-grayish-blue);
+    grid-area: card2;
+  }
+
+  /*============== CARD 3 ==============*/
+  .card-3 {
+    background-color: var(--White);
+    grid-area: card3;
+  }
+
+  /*============== CARD 4 ==============*/
+  .card-4 {
+    background-color: var(--Very-dark-blackish-blue);
+    grid-area: card4;
+  }
+
+  /*============== CARD 5 ==============*/
+  .card-5 {
+    background-color: var(--White);
+    grid-area: card5;
+  }
+}
+
+@media screen and (min-width: 1235px) {
+  /*============== CARD 2 ==============*/
+  .card-1 {
+    background-color: rgb(44, 19, 19);
+  }
+
+  /*============== MAIN ==============*/
+  main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "card1 card1 card2 card5"
+      "card3 card4 card4 card5";
+    margin: 0 auto;
+    margin-top: 5rem;
+    margin-bottom: 5.5rem;
+    max-width: 76rem;
+  }
+
+  /*============== CARD 1 ==============*/
+  .card-1 {
+    background-color: var(--Moderate-violet);
+    grid-area: card1;
+  }
+
+  /*============== CARD 2 ==============*/
+  .card-2 {
+    background-color: var(--Very-dark-grayish-blue);
+    grid-area: card2;
+  }
+
+  /*============== CARD 3 ==============*/
+  .card-3 {
+    background-color: var(--White);
+    grid-area: card3;
+  }
+
+  .card-3 > .card-main > .card-main-paragraph > p {
+    margin-top: 2rem;
+  }
+
+
+  /*============== CARD 4 ==============*/
+  .card-4 {
+    background-color: var(--Very-dark-blackish-blue);
+    grid-area: card4;
+  }
+
+  .card-4 > .card-main > .card-main-paragraph > p {
+    margin-top: 2rem;
+  }
+
+  /*============== CARD 5 ==============*/
+  .card-5 {
+    background-color: var(--White);
+    grid-area: card5;
+  }
+
+  .card-5 > .card-main > .card-main-paragraph > p {
+    margin-top: 2rem;
+  }
+}

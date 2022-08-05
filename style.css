@@ -116,6 +116,9 @@ main > .card {
 /*============== CARD 1 ==============*/
 .card-1 {
   background-color: var(--Moderate-violet);
+  background-image: url("./images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: 90% 0%;
 }
 
 .header-img1 {
@@ -199,7 +202,7 @@ main > .card {
       "card1 card3"
       "card4 card5";
     margin: 0 auto;
-    margin-top: 5rem;
+    margin-top: 7rem;
     margin-bottom: 5.5rem;
     max-width: 76rem;
   }
@@ -249,7 +252,7 @@ main > .card {
       "card1 card1 card2 card5"
       "card3 card4 card4 card5";
     margin: 0 auto;
-    margin-top: 5rem;
+    margin-top: 7rem;
     margin-bottom: 5.5rem;
     max-width: 76rem;
   }
@@ -275,7 +278,6 @@ main > .card {
   .card-3 > .card-main > .card-main-paragraph > p {
     margin-top: 2rem;
   }
-
 
   /*============== CARD 4 ==============*/
   .card-4 {
